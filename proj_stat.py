@@ -29,7 +29,7 @@ while n<len(iplist):
 	try:
 		tn = telnetlib.Telnet(HOST, PORT, timeout = 5)
 		'''
-    print NAME1, colored("Connected", "cyan")
+    		print NAME1, colored("Connected", "cyan")
 		tn.write(b'(PWR?)\n')
 		#print (tn.read_until(b")"))
 		y=tn.read_until(b")")
@@ -40,12 +40,12 @@ while n<len(iplist):
 		'''
 		tn.write(b'(SST+ALRM?)\n')
       		z=tn.read_until(b")")
-    if "No status items" in z:
+    		if "No status items" in z:
 			#print "No attention needed"
 			pass
-    else:
-    	#print colored("ATTENTION NEEDED", "yellow", attrs=["reverse", "blink"])
-    	#print "Message:", z
+    		else:
+    			#print colored("ATTENTION NEEDED", "yellow", attrs=["reverse", "blink"])
+    			#print "Message:", z
 			message = "%s %s %s"%(NAME1, z, now)
 			send_to_telegram(message)
 
