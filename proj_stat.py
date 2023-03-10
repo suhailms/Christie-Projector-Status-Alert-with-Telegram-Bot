@@ -24,8 +24,7 @@ def send_to_telegram(message):
 
 while n<len(iplist):
 	HOST = iplist[n]
-	NAME0 = iplist.index(HOST)
-	NAME1 = prjname[NAME0]
+	NAME1 = prjname[n]
 	try:
 		tn = telnetlib.Telnet(HOST, PORT, timeout = 5)
 		'''
