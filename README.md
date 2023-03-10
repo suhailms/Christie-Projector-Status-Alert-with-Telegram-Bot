@@ -1,1 +1,1 @@
-# Christie Projector Status Notification with TelegramBot
+# Christie Projector Status Alert with TelegramBot
